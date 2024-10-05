@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA5034222CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */; };
+		CA5034242CB1E9A20084CECE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* ContentView.swift */; };
+		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
+		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
+		CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50342A2CB1E9A20084CECE /* Persistence.swift */; };
+		CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */; };
+		CA5034382CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */; };
+		CA5034422CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */; };
+		CA5034442CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA5034342CB1E9A20084CECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA5034162CB1E9A20084CECE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA50341D2CB1E9A20084CECE;
+			remoteInfo = RetoSwiftSoftTek;
+		};
+		CA50343E2CB1E9A20084CECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA5034162CB1E9A20084CECE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA50341D2CB1E9A20084CECE;
+			remoteInfo = RetoSwiftSoftTek;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSwiftSoftTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekApp.swift; sourceTree = "<group>"; };
+		CA5034232CB1E9A20084CECE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA50342A2CB1E9A20084CECE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetoSwiftSoftTek.xcdatamodel; sourceTree = "<group>"; };
+		CA5034332CB1E9A20084CECE /* RetoSwiftSoftTekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoSwiftSoftTekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekTests.swift; sourceTree = "<group>"; };
+		CA50343D2CB1E9A20084CECE /* RetoSwiftSoftTekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoSwiftSoftTekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekUITests.swift; sourceTree = "<group>"; };
+		CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA50341B2CB1E9A20084CECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5034302CB1E9A20084CECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA50343A2CB1E9A20084CECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA5034152CB1E9A10084CECE = {
+			isa = PBXGroup;
+			children = (
+				CA5034202CB1E9A20084CECE /* RetoSwiftSoftTek */,
+				CA5034362CB1E9A20084CECE /* RetoSwiftSoftTekTests */,
+				CA5034402CB1E9A20084CECE /* RetoSwiftSoftTekUITests */,
+				CA50341F2CB1E9A20084CECE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA50341F2CB1E9A20084CECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */,
+				CA5034332CB1E9A20084CECE /* RetoSwiftSoftTekTests.xctest */,
+				CA50343D2CB1E9A20084CECE /* RetoSwiftSoftTekUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA5034202CB1E9A20084CECE /* RetoSwiftSoftTek */ = {
+			isa = PBXGroup;
+			children = (
+				CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */,
+				CA5034232CB1E9A20084CECE /* ContentView.swift */,
+				CA5034252CB1E9A20084CECE /* Assets.xcassets */,
+				CA50342A2CB1E9A20084CECE /* Persistence.swift */,
+				CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */,
+				CA5034272CB1E9A20084CECE /* Preview Content */,
+			);
+			path = RetoSwiftSoftTek;
+			sourceTree = "<group>";
+		};
+		CA5034272CB1E9A20084CECE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA5034362CB1E9A20084CECE /* RetoSwiftSoftTekTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */,
+			);
+			path = RetoSwiftSoftTekTests;
+			sourceTree = "<group>";
+		};
+		CA5034402CB1E9A20084CECE /* RetoSwiftSoftTekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */,
+				CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */,
+			);
+			path = RetoSwiftSoftTekUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA50341D2CB1E9A20084CECE /* RetoSwiftSoftTek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA5034472CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTek" */;
+			buildPhases = (
+				CA50341A2CB1E9A20084CECE /* Sources */,
+				CA50341B2CB1E9A20084CECE /* Frameworks */,
+				CA50341C2CB1E9A20084CECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetoSwiftSoftTek;
+			productName = RetoSwiftSoftTek;
+			productReference = CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA5034322CB1E9A20084CECE /* RetoSwiftSoftTekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA50344A2CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTekTests" */;
+			buildPhases = (
+				CA50342F2CB1E9A20084CECE /* Sources */,
+				CA5034302CB1E9A20084CECE /* Frameworks */,
+				CA5034312CB1E9A20084CECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA5034352CB1E9A20084CECE /* PBXTargetDependency */,
+			);
+			name = RetoSwiftSoftTekTests;
+			productName = RetoSwiftSoftTekTests;
+			productReference = CA5034332CB1E9A20084CECE /* RetoSwiftSoftTekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA50343C2CB1E9A20084CECE /* RetoSwiftSoftTekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA50344D2CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTekUITests" */;
+			buildPhases = (
+				CA5034392CB1E9A20084CECE /* Sources */,
+				CA50343A2CB1E9A20084CECE /* Frameworks */,
+				CA50343B2CB1E9A20084CECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA50343F2CB1E9A20084CECE /* PBXTargetDependency */,
+			);
+			name = RetoSwiftSoftTekUITests;
+			productName = RetoSwiftSoftTekUITests;
+			productReference = CA50343D2CB1E9A20084CECE /* RetoSwiftSoftTekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA5034162CB1E9A20084CECE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CA50341D2CB1E9A20084CECE = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					CA5034322CB1E9A20084CECE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CA50341D2CB1E9A20084CECE;
+					};
+					CA50343C2CB1E9A20084CECE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CA50341D2CB1E9A20084CECE;
+					};
+				};
+			};
+			buildConfigurationList = CA5034192CB1E9A20084CECE /* Build configuration list for PBXProject "RetoSwiftSoftTek" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA5034152CB1E9A10084CECE;
+			productRefGroup = CA50341F2CB1E9A20084CECE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA50341D2CB1E9A20084CECE /* RetoSwiftSoftTek */,
+				CA5034322CB1E9A20084CECE /* RetoSwiftSoftTekTests */,
+				CA50343C2CB1E9A20084CECE /* RetoSwiftSoftTekUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA50341C2CB1E9A20084CECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */,
+				CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5034312CB1E9A20084CECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA50343B2CB1E9A20084CECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA50341A2CB1E9A20084CECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */,
+				CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */,
+				CA5034242CB1E9A20084CECE /* ContentView.swift in Sources */,
+				CA5034222CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA50342F2CB1E9A20084CECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5034382CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5034392CB1E9A20084CECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5034422CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift in Sources */,
+				CA5034442CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA5034352CB1E9A20084CECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA50341D2CB1E9A20084CECE /* RetoSwiftSoftTek */;
+			targetProxy = CA5034342CB1E9A20084CECE /* PBXContainerItemProxy */;
+		};
+		CA50343F2CB1E9A20084CECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA50341D2CB1E9A20084CECE /* RetoSwiftSoftTek */;
+			targetProxy = CA50343E2CB1E9A20084CECE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CA5034452CB1E9A20084CECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA5034462CB1E9A20084CECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA5034482CB1E9A20084CECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RetoSwiftSoftTek/Preview Content\"";
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA5034492CB1E9A20084CECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RetoSwiftSoftTek/Preview Content\"";
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA50344B2CB1E9A20084CECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetoSwiftSoftTek.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetoSwiftSoftTek";
+			};
+			name = Debug;
+		};
+		CA50344C2CB1E9A20084CECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetoSwiftSoftTek.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetoSwiftSoftTek";
+			};
+			name = Release;
+		};
+		CA50344E2CB1E9A20084CECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetoSwiftSoftTek;
+			};
+			name = Debug;
+		};
+		CA50344F2CB1E9A20084CECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28VVELX9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcoronel.RetoSwiftSoftTekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetoSwiftSoftTek;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA5034192CB1E9A20084CECE /* Build configuration list for PBXProject "RetoSwiftSoftTek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA5034452CB1E9A20084CECE /* Debug */,
+				CA5034462CB1E9A20084CECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA5034472CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA5034482CB1E9A20084CECE /* Debug */,
+				CA5034492CB1E9A20084CECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA50344A2CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA50344B2CB1E9A20084CECE /* Debug */,
+				CA50344C2CB1E9A20084CECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA50344D2CB1E9A20084CECE /* Build configuration list for PBXNativeTarget "RetoSwiftSoftTekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA50344E2CB1E9A20084CECE /* Debug */,
+				CA50344F2CB1E9A20084CECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */,
+			);
+			currentVersion = CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */;
+			path = RetoSwiftSoftTek.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CA5034162CB1E9A20084CECE /* Project object */;
+}
