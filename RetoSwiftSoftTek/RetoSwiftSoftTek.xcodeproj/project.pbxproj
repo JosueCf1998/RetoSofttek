@@ -35,6 +35,8 @@
 		CA4A0E932CB2871D00766E15 /* MovieDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E922CB2871D00766E15 /* MovieDetailPresenterProtocol.swift */; };
 		CA4A0E952CB287DA00766E15 /* LoginHomeRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E942CB287DA00766E15 /* LoginHomeRouterProtocol.swift */; };
 		CA4A0E972CB2885200766E15 /* LoginHomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E962CB2885200766E15 /* LoginHomeInteractorProtocol.swift */; };
+		CA4A0E992CB288B500766E15 /* MoviesRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E982CB288B500766E15 /* MoviesRouterProtocol.swift */; };
+		CA4A0E9B2CB288BE00766E15 /* MoviesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */; };
 		CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* MainContentView.swift */; };
 		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
 		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		CA4A0E922CB2871D00766E15 /* MovieDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenterProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E942CB287DA00766E15 /* LoginHomeRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeRouterProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E962CB2885200766E15 /* LoginHomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeInteractorProtocol.swift; sourceTree = "<group>"; };
+		CA4A0E982CB288B500766E15 /* MoviesRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouterProtocol.swift; sourceTree = "<group>"; };
+		CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractorProtocol.swift; sourceTree = "<group>"; };
 		CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSwiftSoftTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5034232CB1E9A20084CECE /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,8 +259,8 @@
 			children = (
 				CA4A0E582CB27D6500766E15 /* View */,
 				CA4A0E572CB27D5F00766E15 /* Presenter */,
-				CA4A0E562CB27D4A00766E15 /* Router */,
 				CA4A0E552CB27D4600766E15 /* Interactor */,
+				CA4A0E562CB27D4A00766E15 /* Router */,
 				CA4A0E542CB27D3C00766E15 /* Entity */,
 			);
 			path = Movies;
@@ -274,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A0E702CB27E3E00766E15 /* MoviesInteractor.swift */,
+				CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A0E6E2CB27E3600766E15 /* MoviesRouter.swift */,
+				CA4A0E982CB288B500766E15 /* MoviesRouterProtocol.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				CA4A0E652CB27DF600766E15 /* MovieDetailRouter.swift in Sources */,
 				CA4A0E7D2CB27E6D00766E15 /* LoginHomeEntity.swift in Sources */,
 				CA4A0E952CB287DA00766E15 /* LoginHomeRouterProtocol.swift in Sources */,
+				CA4A0E9B2CB288BE00766E15 /* MoviesInteractorProtocol.swift in Sources */,
 				CA4A0E812CB27E8B00766E15 /* LoginAccessPresenter.swift in Sources */,
 				CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */,
 				CA4A0E832CB27E9200766E15 /* LoginAccessInteractor.swift in Sources */,
@@ -579,6 +586,7 @@
 				CA4A0E6B2CB27E2800766E15 /* MoviesView.swift in Sources */,
 				CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */,
 				CA4A0E7F2CB27E8400766E15 /* LoginAccessView.swift in Sources */,
+				CA4A0E992CB288B500766E15 /* MoviesRouterProtocol.swift in Sources */,
 				CA4A0E772CB27E5800766E15 /* LoginHomePresenter.swift in Sources */,
 				CA4A0E932CB2871D00766E15 /* MovieDetailPresenterProtocol.swift in Sources */,
 				CA4A0E6D2CB27E2F00766E15 /* MoviesPresenter.swift in Sources */,

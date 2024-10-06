@@ -5,11 +5,11 @@
 //  Created by josue on 6/10/24.
 //
 
-import SwiftUI
+import Foundation
 
-protocol LoginHomeRouterProtocol: ObservableObject {
+protocol LoginHomeRouterProtocol {
     
     // MARK: - FUNCTIONS
-    func makeMoviesView() -> any LoginHomePresenterProtocol
+    func makeMoviesView() -> any MoviesPresenterProtocol
     
 }

@@ -88,7 +88,7 @@ struct LoginHomeView<Presenter: LoginHomePresenterProtocol>: View {
                 }
                 .navigationDestination(isPresented: $presenter.isNavigating) {
                     let presenter = presenter.navigateToMovies()
-                    LoginHomeView(presenter: presenter)
+                    MoviesView(presenter: presenter)
                 }
             }
         }

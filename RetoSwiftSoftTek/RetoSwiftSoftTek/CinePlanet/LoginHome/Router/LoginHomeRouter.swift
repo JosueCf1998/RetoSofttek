@@ -10,11 +10,11 @@ import Foundation
 class LoginHomeRouter: LoginHomeRouterProtocol {
     
     // MARK: - FUNCTIONS
-    func makeMoviesView() -> any LoginHomePresenterProtocol {
+    func makeMoviesView() -> any MoviesPresenterProtocol {
 //        let interactor = MoviesInteractor()
 //        let presenter = MoviesPresenter(interactor: interactor, router: MoviesRouter())
 //        return MoviesView(presenter: presenter)
-        return LoginHomePresenter()
+        return MoviesPresenter()
     }
     
 }

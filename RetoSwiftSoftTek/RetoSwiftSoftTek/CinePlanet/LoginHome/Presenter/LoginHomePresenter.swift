@@ -13,16 +13,16 @@ class LoginHomePresenter: LoginHomePresenterProtocol {
     @Published var userName: String = ""
     @Published var password: String = ""
     @Published var isNavigating: Bool = false
-    private let interactor: LoginInteractor
-    private let router: LoginRouter
+//    private let interactor: LoginInteractor
+//    private let router: LoginRouter
     
     // MARK: - CONSTRUCTOR
     init(
-        interactor: LoginInteractor,
-        router: LoginRouter
+//        interactor: LoginInteractor,
+//        router: LoginRouter
     ) {
-        self.interactor = interactor
-        self.router = router
+//        self.interactor = interactor
+//        self.router = router
     }
     
     // MARK: - METHODS
@@ -40,8 +40,8 @@ class LoginHomePresenter: LoginHomePresenterProtocol {
 //        }
     }
 
-    func navigateToMovies() -> LoginHomePresenter {
-        return router.makeMoviesView()
+    func navigateToMovies() -> any MoviesPresenterProtocol {
+//        return router.makeMoviesView()
     }
     
 }

@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+class MoviesRouter {
+    
+    // MARK: - CONSTRUCTOR
+    init() {}
+    
+    // MARK: - CONSTRUCTOR
+    func makeMovieDetailView(for movie: Movie) -> any MovieDetailPresenterProtocol {
+        let interactor = MovieDetailInteractor()
+        let presenter = MovieDetailPresenter(movie: movie, interactor: interactor, router: MovieDetailRouter())
+        return presenter
+    }
+    
+}
+

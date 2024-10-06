@@ -16,6 +16,6 @@ protocol LoginHomePresenterProtocol: ObservableObject {
     
     // MARK: - FUNCTIONS
     func validateCredentials()
-    func navigateToMovies() -> LoginHomePresenter
+    func navigateToMovies() -> any MoviesPresenterProtocol
     
 }
