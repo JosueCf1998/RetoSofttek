@@ -10,6 +10,5 @@ import SwiftUI
 protocol LoginAccessRouterProtocol {
     
     // MARK: - FUNCTIONS
-    func makeMoviesView() -> any LoginHomePresenterProtocol
     
 }

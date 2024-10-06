@@ -1,5 +1,5 @@
 //
-//  MovieDetailPresenter.swift
+//  MoviesPresenterProtocol.swift
 //  RetoSwiftSoftTek
 //
 //  Created by josue on 6/10/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieDetailPresenter: MovieDetailPresenterProtocol {
+protocol MoviesPresenterProtocol: ObservableObject {
     
     
 }
