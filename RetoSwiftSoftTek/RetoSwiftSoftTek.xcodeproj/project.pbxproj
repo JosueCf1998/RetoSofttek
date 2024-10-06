@@ -7,8 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA5034222CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */; };
-		CA5034242CB1E9A20084CECE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* ContentView.swift */; };
+		CA4A0E612CB27DDC00766E15 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E602CB27DDC00766E15 /* MovieDetailView.swift */; };
+		CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E622CB27DE400766E15 /* MovieDetailPresenter.swift */; };
+		CA4A0E652CB27DF600766E15 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */; };
+		CA4A0E672CB27E0300766E15 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E662CB27E0300766E15 /* MovieDetailInteractor.swift */; };
+		CA4A0E692CB27E1000766E15 /* MovieDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E682CB27E1000766E15 /* MovieDetailEntity.swift */; };
+		CA4A0E6B2CB27E2800766E15 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E6A2CB27E2800766E15 /* MoviesView.swift */; };
+		CA4A0E6D2CB27E2F00766E15 /* MoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E6C2CB27E2F00766E15 /* MoviesPresenter.swift */; };
+		CA4A0E6F2CB27E3600766E15 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E6E2CB27E3600766E15 /* MoviesRouter.swift */; };
+		CA4A0E712CB27E3E00766E15 /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E702CB27E3E00766E15 /* MoviesInteractor.swift */; };
+		CA4A0E732CB27E4600766E15 /* MoviesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E722CB27E4600766E15 /* MoviesEntity.swift */; };
+		CA4A0E752CB27E5100766E15 /* LoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E742CB27E5100766E15 /* LoginHomeView.swift */; };
+		CA4A0E772CB27E5800766E15 /* LoginHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E762CB27E5800766E15 /* LoginHomePresenter.swift */; };
+		CA4A0E792CB27E5E00766E15 /* LoginHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E782CB27E5E00766E15 /* LoginHomeRouter.swift */; };
+		CA4A0E7B2CB27E6500766E15 /* LoginHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E7A2CB27E6500766E15 /* LoginHomeInteractor.swift */; };
+		CA4A0E7D2CB27E6D00766E15 /* LoginHomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E7C2CB27E6D00766E15 /* LoginHomeEntity.swift */; };
+		CA4A0E7F2CB27E8400766E15 /* LoginAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E7E2CB27E8400766E15 /* LoginAccessView.swift */; };
+		CA4A0E812CB27E8B00766E15 /* LoginAccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E802CB27E8B00766E15 /* LoginAccessPresenter.swift */; };
+		CA4A0E832CB27E9200766E15 /* LoginAccessInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E822CB27E9200766E15 /* LoginAccessInteractor.swift */; };
+		CA4A0E852CB27E9A00766E15 /* LoginAccessRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E842CB27E9A00766E15 /* LoginAccessRouter.swift */; };
+		CA4A0E872CB27EA200766E15 /* LoginAccessEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E862CB27EA200766E15 /* LoginAccessEntity.swift */; };
+		CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* MainContentView.swift */; };
 		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
 		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
 		CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50342A2CB1E9A20084CECE /* Persistence.swift */; };
@@ -36,9 +55,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA4A0E602CB27DDC00766E15 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		CA4A0E622CB27DE400766E15 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		CA4A0E662CB27E0300766E15 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
+		CA4A0E682CB27E1000766E15 /* MovieDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailEntity.swift; sourceTree = "<group>"; };
+		CA4A0E6A2CB27E2800766E15 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		CA4A0E6C2CB27E2F00766E15 /* MoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresenter.swift; sourceTree = "<group>"; };
+		CA4A0E6E2CB27E3600766E15 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
+		CA4A0E702CB27E3E00766E15 /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
+		CA4A0E722CB27E4600766E15 /* MoviesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEntity.swift; sourceTree = "<group>"; };
+		CA4A0E742CB27E5100766E15 /* LoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeView.swift; sourceTree = "<group>"; };
+		CA4A0E762CB27E5800766E15 /* LoginHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomePresenter.swift; sourceTree = "<group>"; };
+		CA4A0E782CB27E5E00766E15 /* LoginHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeRouter.swift; sourceTree = "<group>"; };
+		CA4A0E7A2CB27E6500766E15 /* LoginHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeInteractor.swift; sourceTree = "<group>"; };
+		CA4A0E7C2CB27E6D00766E15 /* LoginHomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeEntity.swift; sourceTree = "<group>"; };
+		CA4A0E7E2CB27E8400766E15 /* LoginAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessView.swift; sourceTree = "<group>"; };
+		CA4A0E802CB27E8B00766E15 /* LoginAccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessPresenter.swift; sourceTree = "<group>"; };
+		CA4A0E822CB27E9200766E15 /* LoginAccessInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessInteractor.swift; sourceTree = "<group>"; };
+		CA4A0E842CB27E9A00766E15 /* LoginAccessRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessRouter.swift; sourceTree = "<group>"; };
+		CA4A0E862CB27EA200766E15 /* LoginAccessEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessEntity.swift; sourceTree = "<group>"; };
 		CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSwiftSoftTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekApp.swift; sourceTree = "<group>"; };
-		CA5034232CB1E9A20084CECE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CA5034232CB1E9A20084CECE /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA50342A2CB1E9A20084CECE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -75,6 +113,232 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA4A0E462CB27B8800766E15 /* CinePlanet */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E592CB27D6C00766E15 /* MovieDetail */,
+				CA4A0E532CB27D1E00766E15 /* Movies */,
+				CA4A0E4D2CB27CED00766E15 /* LoginHome */,
+				CA4A0E472CB27C4500766E15 /* LoginAccess */,
+			);
+			path = CinePlanet;
+			sourceTree = "<group>";
+		};
+		CA4A0E472CB27C4500766E15 /* LoginAccess */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E482CB27C4D00766E15 /* View */,
+				CA4A0E492CB27C5300766E15 /* Presenter */,
+				CA4A0E4B2CB27C6C00766E15 /* Interactor */,
+				CA4A0E4A2CB27C6500766E15 /* Router */,
+				CA4A0E4C2CB27C7400766E15 /* Entity */,
+			);
+			path = LoginAccess;
+			sourceTree = "<group>";
+		};
+		CA4A0E482CB27C4D00766E15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E7E2CB27E8400766E15 /* LoginAccessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA4A0E492CB27C5300766E15 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E802CB27E8B00766E15 /* LoginAccessPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CA4A0E4A2CB27C6500766E15 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E842CB27E9A00766E15 /* LoginAccessRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CA4A0E4B2CB27C6C00766E15 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E822CB27E9200766E15 /* LoginAccessInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CA4A0E4C2CB27C7400766E15 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E862CB27EA200766E15 /* LoginAccessEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CA4A0E4D2CB27CED00766E15 /* LoginHome */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E522CB27D1A00766E15 /* View */,
+				CA4A0E512CB27D1400766E15 /* Presenter */,
+				CA4A0E502CB27D0900766E15 /* Router */,
+				CA4A0E4F2CB27D0300766E15 /* Interactor */,
+				CA4A0E4E2CB27CF300766E15 /* Entity */,
+			);
+			path = LoginHome;
+			sourceTree = "<group>";
+		};
+		CA4A0E4E2CB27CF300766E15 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E7C2CB27E6D00766E15 /* LoginHomeEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CA4A0E4F2CB27D0300766E15 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E7A2CB27E6500766E15 /* LoginHomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CA4A0E502CB27D0900766E15 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E782CB27E5E00766E15 /* LoginHomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CA4A0E512CB27D1400766E15 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E762CB27E5800766E15 /* LoginHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CA4A0E522CB27D1A00766E15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E742CB27E5100766E15 /* LoginHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA4A0E532CB27D1E00766E15 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E582CB27D6500766E15 /* View */,
+				CA4A0E572CB27D5F00766E15 /* Presenter */,
+				CA4A0E562CB27D4A00766E15 /* Router */,
+				CA4A0E552CB27D4600766E15 /* Interactor */,
+				CA4A0E542CB27D3C00766E15 /* Entity */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		CA4A0E542CB27D3C00766E15 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E722CB27E4600766E15 /* MoviesEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CA4A0E552CB27D4600766E15 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E702CB27E3E00766E15 /* MoviesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CA4A0E562CB27D4A00766E15 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E6E2CB27E3600766E15 /* MoviesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CA4A0E572CB27D5F00766E15 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E6C2CB27E2F00766E15 /* MoviesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CA4A0E582CB27D6500766E15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E6A2CB27E2800766E15 /* MoviesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA4A0E592CB27D6C00766E15 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E5E2CB27DA200766E15 /* View */,
+				CA4A0E5D2CB27D9D00766E15 /* Presenter */,
+				CA4A0E5C2CB27D9600766E15 /* Router */,
+				CA4A0E5B2CB27D9000766E15 /* Interactor */,
+				CA4A0E5A2CB27D8800766E15 /* Entity */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		CA4A0E5A2CB27D8800766E15 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E682CB27E1000766E15 /* MovieDetailEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CA4A0E5B2CB27D9000766E15 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E662CB27E0300766E15 /* MovieDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CA4A0E5C2CB27D9600766E15 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		CA4A0E5D2CB27D9D00766E15 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E622CB27DE400766E15 /* MovieDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CA4A0E5E2CB27DA200766E15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0E602CB27DDC00766E15 /* MovieDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA4A0E5F2CB27DB500766E15 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CA5034152CB1E9A10084CECE = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +362,9 @@
 		CA5034202CB1E9A20084CECE /* RetoSwiftSoftTek */ = {
 			isa = PBXGroup;
 			children = (
-				CA5034212CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift */,
-				CA5034232CB1E9A20084CECE /* ContentView.swift */,
+				CA5034232CB1E9A20084CECE /* MainContentView.swift */,
+				CA4A0E5F2CB27DB500766E15 /* Networking */,
+				CA4A0E462CB27B8800766E15 /* CinePlanet */,
 				CA5034252CB1E9A20084CECE /* Assets.xcassets */,
 				CA50342A2CB1E9A20084CECE /* Persistence.swift */,
 				CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */,
@@ -263,10 +528,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4A0E7B2CB27E6500766E15 /* LoginHomeInteractor.swift in Sources */,
+				CA4A0E732CB27E4600766E15 /* MoviesEntity.swift in Sources */,
+				CA4A0E852CB27E9A00766E15 /* LoginAccessRouter.swift in Sources */,
+				CA4A0E652CB27DF600766E15 /* MovieDetailRouter.swift in Sources */,
+				CA4A0E7D2CB27E6D00766E15 /* LoginHomeEntity.swift in Sources */,
+				CA4A0E812CB27E8B00766E15 /* LoginAccessPresenter.swift in Sources */,
 				CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */,
+				CA4A0E832CB27E9200766E15 /* LoginAccessInteractor.swift in Sources */,
+				CA4A0E792CB27E5E00766E15 /* LoginHomeRouter.swift in Sources */,
+				CA4A0E692CB27E1000766E15 /* MovieDetailEntity.swift in Sources */,
 				CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */,
-				CA5034242CB1E9A20084CECE /* ContentView.swift in Sources */,
-				CA5034222CB1E9A20084CECE /* RetoSwiftSoftTekApp.swift in Sources */,
+				CA4A0E612CB27DDC00766E15 /* MovieDetailView.swift in Sources */,
+				CA4A0E6F2CB27E3600766E15 /* MoviesRouter.swift in Sources */,
+				CA4A0E672CB27E0300766E15 /* MovieDetailInteractor.swift in Sources */,
+				CA4A0E872CB27EA200766E15 /* LoginAccessEntity.swift in Sources */,
+				CA4A0E712CB27E3E00766E15 /* MoviesInteractor.swift in Sources */,
+				CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */,
+				CA4A0E6B2CB27E2800766E15 /* MoviesView.swift in Sources */,
+				CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */,
+				CA4A0E7F2CB27E8400766E15 /* LoginAccessView.swift in Sources */,
+				CA4A0E772CB27E5800766E15 /* LoginHomePresenter.swift in Sources */,
+				CA4A0E6D2CB27E2F00766E15 /* MoviesPresenter.swift in Sources */,
+				CA4A0E752CB27E5100766E15 /* LoginHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
