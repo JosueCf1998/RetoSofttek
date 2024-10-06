@@ -9,5 +9,9 @@ import Foundation
 
 protocol MovieDetailPresenterProtocol: ObservableObject {
     
+    // MARK: - PROPERTIES
+    var movie: Movie
+    
+    // MARK: - FUNCTIONS
     
 }

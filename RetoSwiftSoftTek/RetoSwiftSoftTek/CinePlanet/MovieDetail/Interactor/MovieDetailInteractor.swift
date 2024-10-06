@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class MovieDetailInteractor: MovieDetailInteractorProtocol {
+    
+    
+}

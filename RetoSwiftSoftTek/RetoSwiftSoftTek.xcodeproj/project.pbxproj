@@ -37,6 +37,8 @@
 		CA4A0E972CB2885200766E15 /* LoginHomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E962CB2885200766E15 /* LoginHomeInteractorProtocol.swift */; };
 		CA4A0E992CB288B500766E15 /* MoviesRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E982CB288B500766E15 /* MoviesRouterProtocol.swift */; };
 		CA4A0E9B2CB288BE00766E15 /* MoviesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */; };
+		CA4A0E9D2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9C2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift */; };
+		CA4A0E9F2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9E2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift */; };
 		CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* MainContentView.swift */; };
 		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
 		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		CA4A0E962CB2885200766E15 /* LoginHomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeInteractorProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E982CB288B500766E15 /* MoviesRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouterProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractorProtocol.swift; sourceTree = "<group>"; };
+		CA4A0E9C2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractorProtocol.swift; sourceTree = "<group>"; };
+		CA4A0E9E2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouterProtocol.swift; sourceTree = "<group>"; };
 		CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSwiftSoftTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5034232CB1E9A20084CECE /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A0E662CB27E0300766E15 /* MovieDetailInteractor.swift */,
+				CA4A0E9C2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */,
+				CA4A0E9E2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -580,9 +586,11 @@
 				CA4A0E6F2CB27E3600766E15 /* MoviesRouter.swift in Sources */,
 				CA4A0E672CB27E0300766E15 /* MovieDetailInteractor.swift in Sources */,
 				CA4A0E872CB27EA200766E15 /* LoginAccessEntity.swift in Sources */,
+				CA4A0E9D2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift in Sources */,
 				CA4A0E712CB27E3E00766E15 /* MoviesInteractor.swift in Sources */,
 				CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */,
 				CA4A0E912CB286C400766E15 /* MoviesPresenterProtocol.swift in Sources */,
+				CA4A0E9F2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift in Sources */,
 				CA4A0E6B2CB27E2800766E15 /* MoviesView.swift in Sources */,
 				CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */,
 				CA4A0E7F2CB27E8400766E15 /* LoginAccessView.swift in Sources */,

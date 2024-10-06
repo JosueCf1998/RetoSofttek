@@ -28,6 +28,19 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
                     .onTapGesture {
                     }
                 VStack {
+                    VStack(spacing: 20) {
+                        Text(presenter.movie.title ?? "No Title")
+                            .font(.largeTitle)
+                            .padding()
+
+                        Text("Release Date: \(presenter.movie.releaseDate ?? Date(), formatter: DateFormatter.longStyle)")
+                        
+                        Text("Rating: \(presenter.movie.rating)")
+                        
+                        Text("Genre: \(presenter.movie.genre ?? "Unknown Genre")")
+                    }
+                    .padding()
+                    .navigationTitle("Movie Details")
                 }
             }
         }
@@ -36,3 +49,10 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
 }
 
 
+extension DateFormatter {
+    static let longStyle: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+}
