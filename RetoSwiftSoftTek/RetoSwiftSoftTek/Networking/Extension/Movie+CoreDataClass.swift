@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import CoreData
+
+@objc(Movie)
+public class Movie: NSManagedObject {
+    // Aquí puedes agregar métodos personalizados si es necesario.
+}

@@ -13,9 +13,10 @@ class MoviesRouter {
     init() {}
     
     // MARK: - CONSTRUCTOR
-    func makeMovieDetailView(for movie: Movie) -> any MovieDetailPresenterProtocol {
+    func getValuesMoviesDetail(for movie: Movie) -> any MovieDetailPresenterProtocol {
         let interactor = MovieDetailInteractor()
-        let presenter = MovieDetailPresenter(movie: movie, interactor: interactor, router: MovieDetailRouter())
+        let router = MovieDetailRouter()
+        let presenter = MovieDetailPresenter(movie: movie, interactor: interactor, router: router)
         return presenter
     }
     

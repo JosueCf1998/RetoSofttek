@@ -10,8 +10,8 @@ import Foundation
 protocol LoginHomePresenterProtocol: ObservableObject {
     
     // MARK: - PROPERTIES
-    var userName: String { get set }
-    var password: String { get set }
+    var userName: TextFieldCustomModel { get set }
+    var password: TextFieldCustomModel { get set }
     var isNavigating: Bool { get set }
     
     // MARK: - FUNCTIONS

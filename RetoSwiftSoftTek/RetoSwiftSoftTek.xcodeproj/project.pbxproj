@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA426B842CB3DE2000D2F1EB /* TextFieldCustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA426B832CB3DE2000D2F1EB /* TextFieldCustomModel.swift */; };
 		CA4A0E612CB27DDC00766E15 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E602CB27DDC00766E15 /* MovieDetailView.swift */; };
 		CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E622CB27DE400766E15 /* MovieDetailPresenter.swift */; };
 		CA4A0E652CB27DF600766E15 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */; };
@@ -39,11 +40,14 @@
 		CA4A0E9B2CB288BE00766E15 /* MoviesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */; };
 		CA4A0E9D2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9C2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift */; };
 		CA4A0E9F2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0E9E2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift */; };
+		CA4A0EA22CB28DA700766E15 /* MyList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0EA12CB28DA700766E15 /* MyList+CoreDataProperties.swift */; };
+		CA4A0EA42CB28DB900766E15 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0EA32CB28DB900766E15 /* Movie+CoreDataClass.swift */; };
+		CA4A0EA62CB2924E00766E15 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0EA52CB2924E00766E15 /* CoreDataProvider.swift */; };
+		CA4A0EA92CB293F600766E15 /* PreviewCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A0EA82CB293F600766E15 /* PreviewCoreDataProvider.swift */; };
 		CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* MainContentView.swift */; };
 		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
 		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
-		CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50342A2CB1E9A20084CECE /* Persistence.swift */; };
-		CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */; };
+		CA50342E2CB1E9A20084CECE /* CinePlanetCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA50342C2CB1E9A20084CECE /* CinePlanetCoreData.xcdatamodeld */; };
 		CA5034382CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */; };
 		CA5034422CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */; };
 		CA5034442CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */; };
@@ -67,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA426B832CB3DE2000D2F1EB /* TextFieldCustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomModel.swift; sourceTree = "<group>"; };
 		CA4A0E602CB27DDC00766E15 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		CA4A0E622CB27DE400766E15 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		CA4A0E642CB27DF600766E15 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
@@ -99,11 +104,14 @@
 		CA4A0E9A2CB288BE00766E15 /* MoviesInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractorProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E9C2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractorProtocol.swift; sourceTree = "<group>"; };
 		CA4A0E9E2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouterProtocol.swift; sourceTree = "<group>"; };
+		CA4A0EA12CB28DA700766E15 /* MyList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA4A0EA32CB28DB900766E15 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA4A0EA52CB2924E00766E15 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		CA4A0EA82CB293F600766E15 /* PreviewCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCoreDataProvider.swift; sourceTree = "<group>"; };
 		CA50341E2CB1E9A20084CECE /* RetoSwiftSoftTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoSwiftSoftTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5034232CB1E9A20084CECE /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CA50342A2CB1E9A20084CECE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetoSwiftSoftTek.xcdatamodel; sourceTree = "<group>"; };
 		CA5034332CB1E9A20084CECE /* RetoSwiftSoftTekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoSwiftSoftTekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekTests.swift; sourceTree = "<group>"; };
@@ -137,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA426B822CB3DDAF00D2F1EB /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				CA426B832CB3DE2000D2F1EB /* TextFieldCustomModel.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		CA4A0E462CB27B8800766E15 /* CinePlanet */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A0E742CB27E5100766E15 /* LoginHomeView.swift */,
+				CA426B822CB3DDAF00D2F1EB /* SubView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +335,8 @@
 			children = (
 				CA4A0E5E2CB27DA200766E15 /* View */,
 				CA4A0E5D2CB27D9D00766E15 /* Presenter */,
-				CA4A0E5C2CB27D9600766E15 /* Router */,
 				CA4A0E5B2CB27D9000766E15 /* Interactor */,
+				CA4A0E5C2CB27D9600766E15 /* Router */,
 				CA4A0E5A2CB27D8800766E15 /* Entity */,
 			);
 			path = MovieDetail;
@@ -371,8 +388,29 @@
 		CA4A0E5F2CB27DB500766E15 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CA50342C2CB1E9A20084CECE /* CinePlanetCoreData.xcdatamodeld */,
+				CA4A0EA72CB2925500766E15 /* Provider */,
+				CA4A0EA02CB28D2A00766E15 /* Extension */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CA4A0EA02CB28D2A00766E15 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0EA12CB28DA700766E15 /* MyList+CoreDataProperties.swift */,
+				CA4A0EA32CB28DB900766E15 /* Movie+CoreDataClass.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CA4A0EA72CB2925500766E15 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A0EA52CB2924E00766E15 /* CoreDataProvider.swift */,
+				CA4A0EA82CB293F600766E15 /* PreviewCoreDataProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		CA5034152CB1E9A10084CECE = {
@@ -402,8 +440,6 @@
 				CA4A0E5F2CB27DB500766E15 /* Networking */,
 				CA4A0E462CB27B8800766E15 /* CinePlanet */,
 				CA5034252CB1E9A20084CECE /* Assets.xcassets */,
-				CA50342A2CB1E9A20084CECE /* Persistence.swift */,
-				CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */,
 				CA5034272CB1E9A20084CECE /* Preview Content */,
 			);
 			path = RetoSwiftSoftTek;
@@ -564,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4A0EA92CB293F600766E15 /* PreviewCoreDataProvider.swift in Sources */,
 				CA4A0E7B2CB27E6500766E15 /* LoginHomeInteractor.swift in Sources */,
 				CA4A0E732CB27E4600766E15 /* MoviesEntity.swift in Sources */,
 				CA4A0E852CB27E9A00766E15 /* LoginAccessRouter.swift in Sources */,
@@ -572,14 +609,15 @@
 				CA4A0E952CB287DA00766E15 /* LoginHomeRouterProtocol.swift in Sources */,
 				CA4A0E9B2CB288BE00766E15 /* MoviesInteractorProtocol.swift in Sources */,
 				CA4A0E812CB27E8B00766E15 /* LoginAccessPresenter.swift in Sources */,
-				CA50342E2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld in Sources */,
+				CA50342E2CB1E9A20084CECE /* CinePlanetCoreData.xcdatamodeld in Sources */,
 				CA4A0E832CB27E9200766E15 /* LoginAccessInteractor.swift in Sources */,
 				CA4A0E8D2CB283A300766E15 /* LoginAccessInteractorProtocol.swift in Sources */,
 				CA4A0E792CB27E5E00766E15 /* LoginHomeRouter.swift in Sources */,
 				CA4A0E692CB27E1000766E15 /* MovieDetailEntity.swift in Sources */,
+				CA4A0EA62CB2924E00766E15 /* CoreDataProvider.swift in Sources */,
+				CA426B842CB3DE2000D2F1EB /* TextFieldCustomModel.swift in Sources */,
 				CA4A0E972CB2885200766E15 /* LoginHomeInteractorProtocol.swift in Sources */,
 				CA4A0E892CB2808B00766E15 /* LoginAccessPresenterProtocol.swift in Sources */,
-				CA50342B2CB1E9A20084CECE /* Persistence.swift in Sources */,
 				CA4A0E8F2CB284C700766E15 /* LoginHomePresenterProtocol.swift in Sources */,
 				CA4A0E8B2CB280CE00766E15 /* LoginAccessRouterProtocol.swift in Sources */,
 				CA4A0E612CB27DDC00766E15 /* MovieDetailView.swift in Sources */,
@@ -587,10 +625,12 @@
 				CA4A0E672CB27E0300766E15 /* MovieDetailInteractor.swift in Sources */,
 				CA4A0E872CB27EA200766E15 /* LoginAccessEntity.swift in Sources */,
 				CA4A0E9D2CB28BCD00766E15 /* MovieDetailInteractorProtocol.swift in Sources */,
+				CA4A0EA42CB28DB900766E15 /* Movie+CoreDataClass.swift in Sources */,
 				CA4A0E712CB27E3E00766E15 /* MoviesInteractor.swift in Sources */,
 				CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */,
 				CA4A0E912CB286C400766E15 /* MoviesPresenterProtocol.swift in Sources */,
 				CA4A0E9F2CB28C3D00766E15 /* MovieDetailRouterProtocol.swift in Sources */,
+				CA4A0EA22CB28DA700766E15 /* MyList+CoreDataProperties.swift in Sources */,
 				CA4A0E6B2CB27E2800766E15 /* MoviesView.swift in Sources */,
 				CA4A0E632CB27DE400766E15 /* MovieDetailPresenter.swift in Sources */,
 				CA4A0E7F2CB27E8400766E15 /* LoginAccessView.swift in Sources */,
@@ -930,13 +970,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CA50342C2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodeld */ = {
+		CA50342C2CB1E9A20084CECE /* CinePlanetCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */,
 			);
 			currentVersion = CA50342D2CB1E9A20084CECE /* RetoSwiftSoftTek.xcdatamodel */;
-			path = RetoSwiftSoftTek.xcdatamodeld;
+			path = CinePlanetCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

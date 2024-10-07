@@ -10,6 +10,6 @@ import Foundation
 protocol LoginHomeRouterProtocol {
     
     // MARK: - FUNCTIONS
-    func makeMoviesView() -> any MoviesPresenterProtocol
+    func getValuesMovie() -> any MoviesPresenterProtocol
     
 }

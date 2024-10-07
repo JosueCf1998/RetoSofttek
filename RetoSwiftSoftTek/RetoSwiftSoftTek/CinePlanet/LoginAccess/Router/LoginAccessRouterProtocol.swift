@@ -10,5 +10,6 @@ import SwiftUI
 protocol LoginAccessRouterProtocol {
     
     // MARK: - FUNCTIONS
+    func getValuesLoginHome() -> any LoginHomePresenterProtocol
     
 }

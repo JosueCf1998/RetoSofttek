@@ -10,10 +10,11 @@ import Foundation
 class MovieDetailPresenter: MovieDetailPresenterProtocol {
     
     // MARK: - PROPERTIES
-    @Published var movie: Movie
-    
     private let interactor: MovieDetailInteractor
     private let router: MovieDetailRouter
+    
+    @Published var movie: Movie
+    @Published var isNavigating: Bool = false
     
     // MARK: - CONSTRUCTOR
     init(

@@ -10,9 +10,11 @@ import SwiftUI
 class MoviesPresenter: MoviesPresenterProtocol {
     
     // MARK: - PROPERTIES
-    @Published var movies: [Movie] = []
     private let interactor: MoviesInteractor
     private let router: MoviesRouter
+    
+    @Published var movies: [Movie] = []
+    @Published var isNavigating: Bool = false
     
     // MARK: - CONSTRUCTOR
     init(
@@ -25,15 +27,15 @@ class MoviesPresenter: MoviesPresenterProtocol {
     
     // MARK: - FUNCTIONS
     func fetchMovies() {
-        interactor.fetchMovies { [weak self] movies in
-            DispatchQueue.main.async {
-                self?.movies = movies
-            }
-        }
+//        interactor.fetchMovies { [weak self] movies in
+//            DispatchQueue.main.async {
+//                self?.movies = movies
+//            }
+//        }
     }
     
-    func navigateToMovieDetail(for movie: Movie) -> some View {
-        return router.makeMovieDetailView(for: movie)
+    func navigateToMovieDetail(for movie: Movie) -> any MovieDetailPresenterProtocol {
+        return router.getValuesMoviesDetail(for: movie)
     }
     
 }

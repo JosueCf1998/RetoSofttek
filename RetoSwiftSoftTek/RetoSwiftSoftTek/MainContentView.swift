@@ -13,10 +13,11 @@ struct MainContentView: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                let interactor = LoginInteractor()
-                let router = LoginRouter()
-                let presenter = LoginPresenter(interactor: interactor, router: router)
-                LoginView(presenter: presenter)
+                let interactor = LoginAccessInteractor()
+                let router = LoginAccessRouter()
+                let presenter = LoginAccessPresenter(interactor: interactor, router: router)
+                LoginAccessView(presenter: presenter)
+                    .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
             }
         }
     }

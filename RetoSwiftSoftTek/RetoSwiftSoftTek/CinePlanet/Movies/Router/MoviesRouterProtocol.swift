@@ -10,6 +10,6 @@ import Foundation
 protocol MoviesRouterProtocol {
     
     // MARK: - FUNCTIONS
-    func makeMovieDetailView(for movie: Movie) -> any MovieDetailPresenterProtocol
+    func getValuesMoviesDetail(for movie: Movie) -> any MovieDetailPresenterProtocol
     
 }

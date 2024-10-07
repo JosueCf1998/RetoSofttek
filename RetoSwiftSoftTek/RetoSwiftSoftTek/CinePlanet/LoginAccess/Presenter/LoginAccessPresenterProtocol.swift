@@ -9,5 +9,10 @@ import SwiftUI
 
 protocol LoginAccessPresenterProtocol: ObservableObject {
     
+    // MARK: - PROPERTIES
+    var isNavigating: Bool { get set }
+    
+    // MARK: - FUNCTIONS
+    func navigateToLoginHome() -> any LoginHomePresenterProtocol
     
 }

@@ -29,21 +29,29 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
                     }
                 VStack {
                     VStack(spacing: 20) {
-                        Text(presenter.movie.title ?? "No Title")
-                            .font(.largeTitle)
-                            .padding()
-
-                        Text("Release Date: \(presenter.movie.releaseDate ?? Date(), formatter: DateFormatter.longStyle)")
-                        
-                        Text("Rating: \(presenter.movie.rating)")
-                        
-                        Text("Genre: \(presenter.movie.genre ?? "Unknown Genre")")
+                        Text("FINAL")
+                        Button {
+                            presenter.isNavigating
+                        } label: {
+                        }
+//                        Text(presenter.movie.title ?? "No Title")
+//                            .font(.largeTitle)
+//                            .padding()
+//
+//                        Text("Release Date: \(presenter.movie.releaseDate ?? Date(), formatter: DateFormatter.longStyle)")
+//                        
+//                        Text("Rating: \(presenter.movie.rating)")
+//                        
+//                        Text("Genre: \(presenter.movie.genre ?? "Unknown Genre")")
                     }
                     .padding()
                     .navigationTitle("Movie Details")
                 }
             }
+            .navigationBarBackButtonHidden()
+            .navigationBarHidden(true)
         }
+        .navigationBarBackButtonHidden()
     }
     
 }

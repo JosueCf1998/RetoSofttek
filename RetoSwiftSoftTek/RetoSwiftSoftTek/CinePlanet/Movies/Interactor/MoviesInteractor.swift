@@ -11,26 +11,26 @@ import CoreData
 class MoviesInteractor {
     
     // MARK: - PROPERTIES
-    let coreDataManager: CoreDataManager
+    let coreDataManager: CoreDataProvider
     
     // MARK: - CONSTRUCTOR
     init(
-        coreDataManager: CoreDataManager = .shared
+        coreDataManager: CoreDataProvider = .shared
     ) {
         self.coreDataManager = coreDataManager
     }
     
     // MARK: - PROPERTIES
     func fetchMovies(completion: @escaping ([Movie]) -> Void) {
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        
-        do {
-            let movies = try coreDataManager.context.fetch(fetchRequest)
-            completion(movies)
-        } catch {
-            print("Error fetching movies: \(error)")
-            completion([])
-        }
+//        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+//        
+//        do {
+//            let movies = try coreDataManager.context.fetch(fetchRequest)
+//            completion(movies)
+//        } catch {
+//            print("Error fetching movies: \(error)")
+//            completion([])
+//        }
     }
     
 }
