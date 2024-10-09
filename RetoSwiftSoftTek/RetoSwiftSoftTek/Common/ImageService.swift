@@ -41,7 +41,6 @@ class ImageService: ObservableObject {
                 }
             } catch {
                 self.isLoading = false
-                print(error)
             }
         }
     }

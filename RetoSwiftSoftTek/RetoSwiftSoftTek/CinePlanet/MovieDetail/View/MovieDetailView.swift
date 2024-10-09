@@ -15,6 +15,7 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
     
     @Environment(\.dismiss) private var dismiss
     
+    @ObservedObject var imageLoader = ImageService()
     
     // MARK: - CONSTRUCTOR
     init(
@@ -78,16 +79,33 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
                     }
                     // MARK: - SECTION MOVIES DETAIL
                     VStack(alignment: .leading, spacing: 10) {
+                        VStack() {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.gray.opacity(0.3))
+                                if imageLoader.isLoading {
+                                    LoadingSubView()
+                                } else {
+                                    if self.imageLoader.image != nil {
+                                        Image(uiImage: self.imageLoader.image!)
+                                            .resizable()
+                                    } else {
+                                        Image(systemName: "xmark.circle.fill")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                            }
+                            .frame(height: 300)
+                            .cornerRadius(50)
+                            .shadow(radius: 4)
+                        }
+                        
                         Text(presenter.movie.title)
                             .font(.system(size: 40, weight: .bold))
                             .foregroundColor(.white)
-                        Text(presenter.movie.image)
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                        Text(presenter.movie.note)
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                        Text(presenter.movie.resume)
+                        Text(presenter.movie.overview)
                             .font(.system(size: 20, weight: .bold))
                             .foregroundColor(.white)
                     }
@@ -99,6 +117,9 @@ struct MovieDetailView<Presenter: MovieDetailPresenterProtocol>: View {
         }
         .navigationBarBackButtonHidden()
         .navigationBarHidden(true)
+        .onAppear() {
+            self.imageLoader.loadImage(with: presenter.movie.posterPath)
+        }
     }
     
 }

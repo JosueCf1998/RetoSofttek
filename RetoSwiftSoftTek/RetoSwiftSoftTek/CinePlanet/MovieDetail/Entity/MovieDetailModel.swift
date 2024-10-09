@@ -29,4 +29,26 @@ struct MovieDetailModel: Hashable {
         })
     }
     
+    static func convertMemory(_ data: [ListMovies]) -> [MovieDetailModel] {
+        data.map({
+            MovieDetailModel(
+                posterPath: $0.posterPath ?? "",
+                title: $0.title ?? "",
+                voteAverage: $0.voteAverage,
+                releaseDate: $0.releaseDate ?? "",
+                overview: $0.overview ?? ""
+            )
+        })
+    }
+
+    static func convertMemory(_ data: MovieDetailModel) -> ListMovies {
+        let task = ListMovies(context: CoreDataManager.shared.viewContext)
+        task.posterPath = data.posterPath
+        task.title = data.title
+        task.voteAverage = data.voteAverage ?? 0.0
+        task.releaseDate = data.releaseDate
+        task.overview = data.overview
+        return task
+    }
+    
 }

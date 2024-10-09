@@ -33,7 +33,7 @@ class CoreDataManager {
 // MARK: - EXTENSION
 extension CoreDataManager: CoreDataManagerProtocol {
     
-    func getAllListMovies(completion: @escaping(Result<[ListMovies], ErrorService>) -> Void) {
+    func listMoviesMemory(completion: @escaping(Result<[ListMovies], ErrorService>) -> Void) {
         let request: NSFetchRequest<ListMovies> = ListMovies.fetchRequest()
         do {
             let response = try viewContext.fetch(request)
@@ -44,14 +44,8 @@ extension CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
-    func saveMovie(request: MovieModel, completion: @escaping(Result<Void, ErrorService>) -> Void) {
+    func saveMovieMemory(request: ListMovies, completion: @escaping(Result<Void, ErrorService>) -> Void) {
         do {
-            let task = ListMovies(context: CoreDataManager.shared.viewContext)
-            task.title = request.title
-            task.image = request.image
-            task.note = request.note
-            task.date = Date()
-            task.resume = request.image
             try viewContext.save()
             completion(.success(()))
         } catch {
@@ -85,27 +79,41 @@ extension CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
-    func deleteMovie(movie: ListMovies) {
-        viewContext.delete(movie)
+    func deleteMovie(_ index : Int, completion: @escaping(Result<Void, ErrorService>) -> Void) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ListMovies")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try viewContext.fetch(fetchRequest)
+            for (id,item) in results.enumerated() {
+                if index == id {
+                    guard let objectData = item as? NSManagedObject else {continue}
+                    viewContext.delete(objectData)
+                    completion(.success(()))
+                }
+            }
+        } catch {
+            let error = ErrorService(code: "102", message: error.localizedDescription)
+            completion(.failure(error))
+        }
     }
     
     func saveLisMoviesMock(completion: @escaping(Result<Void, ErrorService>) -> Void) {
-        getAllListMovies { result in
-            
-        }
-        for number in 1...20 {
-            do {
-                let task = ListMovies(context: CoreDataManager.shared.viewContext)
-                task.title = "spiderman \(number)"
-                task.image = "background-spiderman"
-                try viewContext.save()
-                completion(.success(()))
-            } catch {
-                viewContext.rollback()
-                let error = ErrorService(code: "102", message: error.localizedDescription)
-                completion(.failure(error))
-            }
-        }
+//        getAllListMovies { result in
+//            
+//        }
+//        for number in 1...20 {
+//            do {
+//                let task = ListMovies(context: CoreDataManager.shared.viewContext)
+//                task.title = "spiderman \(number)"
+//                task.image = "background-spiderman"
+//                try viewContext.save()
+//                completion(.success(()))
+//            } catch {
+//                viewContext.rollback()
+//                let error = ErrorService(code: "102", message: error.localizedDescription)
+//                completion(.failure(error))
+//            }
+//        }
     }
     
 }

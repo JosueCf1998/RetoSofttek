@@ -9,7 +9,7 @@ import Foundation
 
 struct ListMoviesModelData: Codable {
     
-    let dates: Dates
+    let dates: Dates?
     let page: Int
     let results: [MovieDetailModelData]
     let totalPages: Int?

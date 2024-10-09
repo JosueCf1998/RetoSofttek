@@ -88,6 +88,9 @@ struct MoviesView<Presenter: MoviesPresenterProtocol>: View {
                                 .background(Color(.systemGray6))
                                 .cornerRadius(10000)
                         }
+                        .onChange(of: presenter.inputSearch) {
+                            presenter.getSearchMovies()
+                        }
                         .onTapGesture {
                             focusInput = .search
                             focusKeyboard = true
@@ -95,40 +98,118 @@ struct MoviesView<Presenter: MoviesPresenterProtocol>: View {
                     }
                     // MARK: - SECTION LIST MOVIES
                     if !focusKeyboard {
-                        VStack() {
-                            ScrollView {
-                                LazyVGrid(columns: Array(repeating: GridItem(), count: 3), content: {
-                                    ForEach(presenter.listMovies, id: \.self) { item in
-                                        VStack(alignment: .center, spacing: 10) {
-                                            CustomImageView(movie: item)
-                                            Text(item.title)
-                                                .font(.system(size: 15))
-                                                .foregroundColor(.white)
-                                                .multilineTextAlignment(.center)
-                                            Spacer()
-                                        }
-                                        .onTapGesture {
-                                            presenter.validateMovieDetail(item)
+                        ScrollListMovies(
+                            listMovies: $presenter.listMovies,
+                            loadMoreList: {
+                                presenter.getListMovies()
+                            },
+                            selectedMovieDetail: { item in
+                                presenter.validateMovieDetail(item)
+                            }
+                        )
+                    } else {
+                        VStack(alignment: .leading, spacing: 12) {
+                            if presenter.searchMovies.count > 0 {
+                                Text("Resultados:")
+                                    .font(.system(size: 18))
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.leading)
+                                ScrollView {
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        ForEach(presenter.searchMovies, id: \.self) { item in
+                                            ZStack() {
+                                                HStack(spacing: 0) {
+                                                    Text(item.title)
+                                                        .font(.system(size: 15))
+                                                        .foregroundColor(.white)
+                                                        .multilineTextAlignment(.leading)
+                                                    Spacer()
+                                                }
+                                                .padding(.horizontal, 16)
+                                                .padding(.vertical, 8)
+                                                .background(
+                                                    Rectangle()
+                                                        .background(.gray)
+                                                        .opacity(0.2)
+                                                        .cornerRadius(16)
+                                                )
+                                            }
+                                            .onTapGesture {
+                                                presenter.validateMovieDetailMemory(item)
+                                            }
                                         }
                                     }
-                                })
+                                    .onTapGesture {
+                                        dismissKeyboard()
+                                    }
+                                }
+                            } else {
+                                if presenter.recentMovies.count > 0 {
+                                    VStack(alignment: .leading, spacing: 12) {
+                                        Text("Buscados Recientemente:")
+                                            .font(.system(size: 18))
+                                            .foregroundColor(.white)
+                                            .multilineTextAlignment(.leading)
+                                        ScrollView {
+                                            VStack(alignment: .leading, spacing: 8) {
+                                                ForEach(Array(presenter.recentMovies.enumerated()), id: \.offset) { index, item in
+                                                    ZStack() {
+                                                        HStack(spacing: 0) {
+                                                            Text(item.title)
+                                                                .font(.system(size: 15))
+                                                                .foregroundColor(.white)
+                                                                .multilineTextAlignment(.leading)
+                                                            Spacer()
+                                                            Button {
+                                                                presenter.getDeleteMovieMemory(index)
+                                                            } label: {
+                                                                Image(systemName: "xmark.circle.fill")
+                                                                    .resizable()
+                                                                    .frame(width: 20, height: 20)
+                                                                    .foregroundColor(.white)
+                                                            }
+
+                                                        }
+                                                        .padding(.horizontal, 16)
+                                                        .padding(.vertical, 8)
+                                                        .background(
+                                                            Rectangle()
+                                                                .background(.gray)
+                                                                .opacity(0.2)
+                                                                .cornerRadius(16)
+                                                        )
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .onTapGesture(){
+                                        dismissKeyboard()
+                                    }
+                                }
                             }
                         }
-                    } else {
+                        .onAppear() {
+                            presenter.inputSearch = ""
+                            presenter.getListMoviesMemory()
+                        }
                         Spacer()
                     }
                 }
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
-            .onAppear() {
-                presenter.getListMovies()
+            .alert("Alerta de Error", isPresented: $presenter.isShowingError) {
+                Button("OK", role: .cancel) { returnLogin = false }
             }
-//            .navigationDestination(isPresented: $presenter.isNavigating) {
-//                if let movie = presenter.selectedMovie {
-//                    InitialMovieDetailView(returnLogin: $returnLogin, movie: movie)
-//                } else { EmptyView() }
-//            }
+            .onAppear() {
+                focusKeyboard = false
+            }
+            .navigationDestination(isPresented: $presenter.isNavigating) {
+                if let movie = presenter.selectedMovie {
+                    InitialMovieDetailView(returnLogin: $returnLogin, movie: movie)
+                } else { EmptyView() }
+            }
         }
         .navigationBarBackButtonHidden()
         .navigationBarHidden(true)

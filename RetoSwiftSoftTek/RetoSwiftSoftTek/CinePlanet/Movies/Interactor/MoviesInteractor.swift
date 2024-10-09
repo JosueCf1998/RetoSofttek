@@ -28,8 +28,33 @@ class MoviesInteractor {
 extension MoviesInteractor: MoviesInteractorProtocol {
     
     // MARK: - SECTION API SERVICE
-    func getListMovies(completion: @escaping (Result<(ListMoviesModel, [MovieDetailModel]), ErrorService>) -> Void) {
-        providerApi.listMovies { result in
+    func getListMovies(param: String, completion: @escaping (Result<(ListMoviesModel, [MovieDetailModel]), ErrorService>) -> Void) {
+        let param = [
+            QueryParams(key: "page", value: param),
+            QueryParams(key: "language", value: Constants.language),
+            QueryParams(key: "api_key", value: Constants.apiKey),
+        ]
+        providerApi.listMovies(param: param) { result in
+            switch result {
+            case .success(let response):
+                let list = ListMoviesModel.convert(response)
+                let detail = MovieDetailModel.convertList(response.results)
+                completion(.success((list, detail)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getSearchMovies(query: String, page: String, completion: @escaping (Result<(ListMoviesModel, [MovieDetailModel]), ErrorService>) -> Void) {
+        let param = [
+            QueryParams(key: "query", value: query),
+            QueryParams(key: "include_adult", value: Constants.includeAdult),
+            QueryParams(key: "language", value: Constants.language),
+            QueryParams(key: "page", value: page),
+            QueryParams(key: "api_key", value: Constants.apiKey),
+        ]
+        providerApi.searchMovies(param: param) { result in
             switch result {
             case .success(let response):
                 let list = ListMoviesModel.convert(response)
@@ -42,11 +67,11 @@ extension MoviesInteractor: MoviesInteractorProtocol {
     }
     
     // MARK: - SECTION CORE DATA
-    func getAllListMovies(completion: @escaping (Result<[ListMovieModel], ErrorService>) -> Void) {
-        providerCore.getAllListMovies { result in
+    func getListMoviesMemory(completion: @escaping (Result<[MovieDetailModel], ErrorService>) -> Void) {
+        providerCore.listMoviesMemory { result in
             switch result {
             case .success(let response):
-                let data = ListMovieModel.convertList(response)
+                let data = MovieDetailModel.convertMemory(response)
                 completion(.success(data))
             case .failure(let error):
                 completion(.failure(error))
@@ -54,8 +79,9 @@ extension MoviesInteractor: MoviesInteractorProtocol {
         }
     }
     
-    func saveMovie(_ request: MovieModel, completion: @escaping (Result<Void, ErrorService>) -> Void) {
-        providerCore.saveMovie(request: request) { result in
+    func getSaveMovieMemory(_ request: MovieDetailModel, completion: @escaping (Result<Void, ErrorService>) -> Void) {
+        let requestList = MovieDetailModel.convertMemory(request)
+        providerCore.saveMovieMemory(request: requestList) { result in
             switch result {
             case .success(let response):
                 completion(.success(response))
@@ -65,8 +91,19 @@ extension MoviesInteractor: MoviesInteractorProtocol {
         }
     }
     
-    func deleteAllMovies(completion: @escaping (Result<Void, ErrorService>) -> Void) {
+    func getDeleteAllMoviesMemory(completion: @escaping (Result<Void, ErrorService>) -> Void) {
         providerCore.deleteAllMovies { result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getDeleteMovieMemory(_ index: Int, completion: @escaping (Result<Void, ErrorService>) -> Void) {
+        providerCore.deleteMovie(index) { result in
             switch result {
             case .success(let response):
                 completion(.success(response))

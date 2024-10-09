@@ -12,16 +12,23 @@ protocol MoviesPresenterProtocol: ObservableObject {
     // MARK: - PROPERTIES
     var inputSearch: String { get set }
     var listMovies: [MovieDetailModel] { get set }
+    var recentMovies: [MovieDetailModel] { get set }
+    var searchMovies: [MovieDetailModel] { get set }
     var selectedMovie: MovieDetailModel? { get set }
     
     var isNavigating: Bool { get set }
+    var isShowingError: Bool { get set }
     
     // MARK: - FUNCTIONS
     func validateMovieDetail(_ item: MovieDetailModel)
+    func validateMovieDetailMemory(_ item: MovieDetailModel)
     
     func getListMovies()
-    func fetchMovies()
-    func saveMovie()
-    func deleteAllMovies()
+    func getSearchMovies()
+    
+    func getListMoviesMemory()
+    func getSaveMovieMemory()
+    func getDeleteMovieMemory(_ index: Int)
+    func getDeleteAllMoviesMemory()
     
 }

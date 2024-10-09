@@ -14,10 +14,16 @@ class MoviesPresenter: MoviesPresenterProtocol {
     private let router: MoviesRouter
     
     @Published var listMovies: [MovieDetailModel] = []
-//    @Published var listMovies: [ListMovieModel] = []
+    @Published var recentMovies: [MovieDetailModel] = []
+    @Published var searchMovies: [MovieDetailModel] = []
     @Published var selectedMovie: MovieDetailModel? = nil
-    @Published var isNavigating: Bool = false
     @Published var inputSearch: String = ""
+    
+    @Published var isNavigating: Bool = false
+    @Published var isShowingError: Bool = false
+    
+    var emptyList: Bool = false
+    var newPage: Int = 0
     
     // MARK: - CONSTRUCTOR
     init(
@@ -29,6 +35,16 @@ class MoviesPresenter: MoviesPresenterProtocol {
     }
     
     // MARK: - FUNCTIONS
+    func validateMovieDetail(_ item: MovieDetailModel) {
+        selectedMovie = item
+        isNavigating = true
+    }
+    
+    func validateMovieDetailMemory(_ item: MovieDetailModel) {
+        selectedMovie = item
+        getSaveMovieMemory()
+        self.isNavigating = true
+    }
     
 }
 
@@ -36,70 +52,98 @@ class MoviesPresenter: MoviesPresenterProtocol {
 extension MoviesPresenter {
     
     func getListMovies() {
-        interactor.getListMovies { [weak self] result in
+        if emptyList {
+            return
+        }
+        newPage += 1
+        interactor.getListMovies(param: "\(newPage)") { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
-                case .success(let list, let detail):
-                    print(detail.count)
-                    self.listMovies = detail
-                case .failure(let error):
-                    print(error)
+                case .success((_, let detail)):
+                    if detail.count == 0 {
+                        self.emptyList = true
+                    }
+                    self.listMovies += detail
+                case .failure(_):
+                    self.isShowingError = true
                 }
             }
         }
     }
     
-    func fetchMovies() {
-        interactor.getAllListMovies { [weak self] result in
+    func getSearchMovies() {
+        var query = inputSearch
+        var page = "1"
+        interactor.getSearchMovies(query: query, page: page) { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success((let list, let detail)):
+                    self.searchMovies = detail
+                case .failure(_):
+                    self.isShowingError = true
+                }
+            }
+        }
+    }
+    
+    func getListMoviesMemory() {
+        interactor.getListMoviesMemory { [weak self] result in
+            guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
-//                    self?.listMovies = response
-                    break
-                case .failure(let error):
-                    print(error)
+                    self.recentMovies = response
+                case .failure(_):
+                    self.isShowingError = true
                 }
             }
         }
     }
     
-    func saveMovie() {
-        let request = MovieModel(
-            title: "",
-            image: "",
-            note: "",
-            date: "",
-            resume: ""
-        )
-        interactor.saveMovie(request) { [weak self] result in
+    func getSaveMovieMemory() {
+        if let request = selectedMovie {
+            interactor.getSaveMovieMemory(request) { [weak self] result in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(_):
+                        self.getListMoviesMemory()
+                    case .failure(_):
+                        self.isShowingError = true
+                    }
+                }
+            }
+        }
+    }
+    
+    func getDeleteAllMoviesMemory() {
+        interactor.getDeleteAllMoviesMemory { [weak self] result in
+            guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(_):
-                    print("se guardo")
-                case .failure(let error):
-                    print(error)
+                    self.getListMoviesMemory()
+                case .failure(_):
+                    self.isShowingError = true
                 }
             }
         }
     }
     
-    func deleteAllMovies() {
-        interactor.deleteAllMovies { [weak self] result in
+    func getDeleteMovieMemory(_ index: Int) {
+        interactor.getDeleteMovieMemory(index) { [weak self] result in
+            guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(_):
-                    print("se elimino todos")
-                case .failure(let error):
-                    print(error)
+                    self.getListMoviesMemory()
+                case .failure(_):
+                    self.isShowingError = true
                 }
             }
         }
-    }
-    
-    func validateMovieDetail(_ item: MovieDetailModel) {
-        selectedMovie = item
-        isNavigating = true
     }
     
 }

@@ -11,12 +11,12 @@ struct InitialMovieDetailView: View {
     
     // MARK: - PROPERTIES
     @Binding var returnLogin: Bool
-    var movie: ListMovieModel
+    var movie: MovieDetailModel
     
     // MARK: - PROPERTIES
     init(
         returnLogin: Binding<Bool>,
-        movie: ListMovieModel
+        movie: MovieDetailModel
     ) {
         self._returnLogin = returnLogin
         self.movie = movie
@@ -26,7 +26,7 @@ struct InitialMovieDetailView: View {
     var body: some View {
         let interactor = MovieDetailInteractor()
         let router = MovieDetailRouter()
-        let presenter = MovieDetailPresenter(movie: movie, interactor: interactor, router: router)
+        let presenter = MovieDetailPresenter(interactor: interactor, router: router, movie: movie)
         MovieDetailView(presenter: presenter, returnLogin: $returnLogin)
     }
     

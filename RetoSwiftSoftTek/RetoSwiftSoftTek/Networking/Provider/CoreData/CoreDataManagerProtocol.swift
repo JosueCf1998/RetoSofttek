@@ -10,8 +10,9 @@ import Foundation
 protocol CoreDataManagerProtocol {
     
     // MARK: - FUNCTIONS
-    func saveMovie(request: MovieModel, completion: @escaping(Result<Void, ErrorService>) -> Void)
-    func getAllListMovies(completion: @escaping(Result<[ListMovies], ErrorService>) -> Void)
+    func listMoviesMemory(completion: @escaping(Result<[ListMovies], ErrorService>) -> Void)
+    func saveMovieMemory(request: ListMovies, completion: @escaping(Result<Void, ErrorService>) -> Void)
+    func deleteMovie(_ index : Int, completion: @escaping(Result<Void, ErrorService>) -> Void)
     func deleteAllMovies(completion: @escaping(Result<Void, ErrorService>) -> Void)
     
     func saveLisMoviesMock(completion: @escaping(Result<Void, ErrorService>) -> Void)

@@ -12,15 +12,15 @@ class MovieDetailPresenter: MovieDetailPresenterProtocol {
     // MARK: - PROPERTIES
     private let interactor: MovieDetailInteractor
     private let router: MovieDetailRouter
+    @Published var movie: MovieDetailModel
     
-    @Published var movie: ListMovieModel
     @Published var isNavigating: Bool = false
     
     // MARK: - CONSTRUCTOR
     init(
-        movie: ListMovieModel,
         interactor: MovieDetailInteractor,
-        router: MovieDetailRouter
+        router: MovieDetailRouter,
+        movie: MovieDetailModel
     ) {
         self.movie = movie
         self.interactor = interactor

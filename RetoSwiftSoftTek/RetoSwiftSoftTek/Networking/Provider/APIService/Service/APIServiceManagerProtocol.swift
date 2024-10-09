@@ -9,6 +9,7 @@ import Foundation
 
 protocol APIServiceManagerProtocol {
     
-    func listMovies(completion: @escaping (Result<ListMoviesModelData, ErrorService>) -> Void)
+    func listMovies(param: [QueryParams], completion: @escaping (Result<ListMoviesModelData, ErrorService>) -> Void)
+    func searchMovies(param: [QueryParams], completion: @escaping (Result<ListMoviesModelData, ErrorService>) -> Void)
     
 }
