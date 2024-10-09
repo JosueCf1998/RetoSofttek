@@ -188,10 +188,10 @@
 		CA4A0E462CB27B8800766E15 /* CinePlanet */ = {
 			isa = PBXGroup;
 			children = (
-				CA4A0E592CB27D6C00766E15 /* MovieDetail */,
-				CA4A0E532CB27D1E00766E15 /* Movies */,
-				CA4A0E4D2CB27CED00766E15 /* LoginHome */,
 				CA4A0E472CB27C4500766E15 /* LoginAccess */,
+				CA4A0E4D2CB27CED00766E15 /* LoginHome */,
+				CA4A0E532CB27D1E00766E15 /* Movies */,
+				CA4A0E592CB27D6C00766E15 /* MovieDetail */,
 			);
 			path = CinePlanet;
 			sourceTree = "<group>";
