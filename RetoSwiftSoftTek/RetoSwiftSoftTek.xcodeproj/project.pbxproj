@@ -45,9 +45,10 @@
 		CA5034242CB1E9A20084CECE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034232CB1E9A20084CECE /* MainContentView.swift */; };
 		CA5034262CB1E9A20084CECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034252CB1E9A20084CECE /* Assets.xcassets */; };
 		CA5034292CB1E9A20084CECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */; };
-		CA5034382CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */; };
+		CA5034382CB1E9A20084CECE /* MockMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034372CB1E9A20084CECE /* MockMoviesInteractor.swift */; };
 		CA5034422CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */; };
 		CA5034442CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */; };
+		CA5B906A2CB6E2210082509A /* MoviesPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5B90692CB6E2210082509A /* MoviesPresenterTest.swift */; };
 		CAAFEC4F2CB5326500A0377D /* InitialLoginAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFEC4E2CB5326500A0377D /* InitialLoginAccessView.swift */; };
 		CAAFEC512CB5331E00A0377D /* InitialLoginHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFEC502CB5331E00A0377D /* InitialLoginHomeView.swift */; };
 		CAAFEC532CB5339F00A0377D /* InitialMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFEC522CB5339F00A0377D /* InitialMoviesView.swift */; };
@@ -126,10 +127,11 @@
 		CA5034252CB1E9A20084CECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA5034282CB1E9A20084CECE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA5034332CB1E9A20084CECE /* RetoSwiftSoftTekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoSwiftSoftTekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekTests.swift; sourceTree = "<group>"; };
+		CA5034372CB1E9A20084CECE /* MockMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMoviesInteractor.swift; sourceTree = "<group>"; };
 		CA50343D2CB1E9A20084CECE /* RetoSwiftSoftTekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoSwiftSoftTekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5034412CB1E9A20084CECE /* RetoSwiftSoftTekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekUITests.swift; sourceTree = "<group>"; };
 		CA5034432CB1E9A20084CECE /* RetoSwiftSoftTekUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoSwiftSoftTekUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA5B90692CB6E2210082509A /* MoviesPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresenterTest.swift; sourceTree = "<group>"; };
 		CAAFEC4E2CB5326500A0377D /* InitialLoginAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginAccessView.swift; sourceTree = "<group>"; };
 		CAAFEC502CB5331E00A0377D /* InitialLoginHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginHomeView.swift; sourceTree = "<group>"; };
 		CAAFEC522CB5339F00A0377D /* InitialMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMoviesView.swift; sourceTree = "<group>"; };
@@ -483,7 +485,8 @@
 		CA5034362CB1E9A20084CECE /* RetoSwiftSoftTekTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA5034372CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift */,
+				CA5034372CB1E9A20084CECE /* MockMoviesInteractor.swift */,
+				CA5B90692CB6E2210082509A /* MoviesPresenterTest.swift */,
 			);
 			path = RetoSwiftSoftTekTests;
 			sourceTree = "<group>";
@@ -754,7 +757,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA5034382CB1E9A20084CECE /* RetoSwiftSoftTekTests.swift in Sources */,
+				CA5B906A2CB6E2210082509A /* MoviesPresenterTest.swift in Sources */,
+				CA5034382CB1E9A20084CECE /* MockMoviesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

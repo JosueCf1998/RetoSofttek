@@ -10,8 +10,8 @@ import SwiftUI
 class MoviesPresenter: MoviesPresenterProtocol {
     
     // MARK: - PROPERTIES
-    private let interactor: MoviesInteractor
-    private let router: MoviesRouter
+    private let interactor: MoviesInteractorProtocol
+    private let router: MoviesRouterProtocol
     
     @Published var listMovies: [MovieDetailModel] = []
     @Published var recentMovies: [MovieDetailModel] = []
@@ -27,8 +27,8 @@ class MoviesPresenter: MoviesPresenterProtocol {
     
     // MARK: - CONSTRUCTOR
     init(
-        interactor: MoviesInteractor,
-        router: MoviesRouter
+        interactor: MoviesInteractorProtocol,
+        router: MoviesRouterProtocol
     ) {
         self.interactor = interactor
         self.router = router

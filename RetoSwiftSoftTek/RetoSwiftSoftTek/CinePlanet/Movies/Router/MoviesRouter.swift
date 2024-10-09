@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MoviesRouter {
+class MoviesRouter: MoviesRouterProtocol {
     
     // MARK: - CONSTRUCTOR
     init() {}

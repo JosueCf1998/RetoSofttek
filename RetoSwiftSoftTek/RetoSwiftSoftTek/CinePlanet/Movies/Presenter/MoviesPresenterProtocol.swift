@@ -16,6 +16,8 @@ protocol MoviesPresenterProtocol: ObservableObject {
     var searchMovies: [MovieDetailModel] { get set }
     var selectedMovie: MovieDetailModel? { get set }
     
+    var emptyList: Bool { get set }
+    
     var isNavigating: Bool { get set }
     var isShowingError: Bool { get set }
     
