@@ -13,6 +13,5 @@ protocol LoginAccessPresenterProtocol: ObservableObject {
     var isNavigating: Bool { get set }
     
     // MARK: - FUNCTIONS
-    func navigateToLoginHome() -> any LoginHomePresenterProtocol
     
 }

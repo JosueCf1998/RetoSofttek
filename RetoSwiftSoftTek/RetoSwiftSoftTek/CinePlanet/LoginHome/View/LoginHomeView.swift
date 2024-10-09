@@ -11,8 +11,9 @@ struct LoginHomeView<Presenter: LoginHomePresenterProtocol>: View {
     
     // MARK: - PROPERTIES
     @StateObject private var presenter: Presenter
+    @Binding private var returnLogin: Bool
     
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     
     @State private var isSecure: Bool = true
     @State private var showAlert: Bool = false
@@ -20,14 +21,16 @@ struct LoginHomeView<Presenter: LoginHomePresenterProtocol>: View {
     
     // MARK: - CONSTRUCTOR
     init(
-        presenter: Presenter
+        presenter: Presenter,
+        returnLogin: Binding<Bool>
     ) {
         self._presenter = StateObject(wrappedValue: presenter)
+        self._returnLogin = returnLogin
     }
     
     // MARK: - CONTENT BODY
     var body: some View {
-        NavigationStack {
+        
             ZStack() {
                 VStack() {
                     ZStack() {
@@ -126,7 +129,7 @@ struct LoginHomeView<Presenter: LoginHomePresenterProtocol>: View {
                                     }
                                 }
                                 .textFieldStyle(PlainTextFieldStyle())
-                            
+                                
                                 // MARK: - SECTION BUTTON
                                 VStack(spacing: 25) {
                                     Button {
@@ -175,18 +178,15 @@ struct LoginHomeView<Presenter: LoginHomePresenterProtocol>: View {
                         }
                         .padding()
                         .navigationDestination(isPresented: $presenter.isNavigating) {
-                            let presenter = presenter.navigateToMovies() as! MoviesPresenter
-                            MoviesView(presenter: presenter)
+                            InitialMoviesView(returnLogin: $returnLogin)
                         }
                     }
                 }
-                .padding(.horizontal, 20)
-                .padding(.vertical, 20)
+                .padding(20)
             }
             .navigationBarBackButtonHidden()
             .navigationBarHidden(true)
-        }
-        .navigationBarBackButtonHidden()
+        
     }
     
 }

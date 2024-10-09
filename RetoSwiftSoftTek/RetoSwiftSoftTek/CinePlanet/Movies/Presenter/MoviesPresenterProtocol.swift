@@ -10,11 +10,18 @@ import Foundation
 protocol MoviesPresenterProtocol: ObservableObject {
     
     // MARK: - PROPERTIES
-    var movies: [Movie] { get set }
+    var inputSearch: String { get set }
+    var listMovies: [MovieDetailModel] { get set }
+    var selectedMovie: MovieDetailModel? { get set }
+    
     var isNavigating: Bool { get set }
     
     // MARK: - FUNCTIONS
+    func validateMovieDetail(_ item: MovieDetailModel)
+    
+    func getListMovies()
     func fetchMovies()
-    func navigateToMovieDetail(for movie: Movie) -> any MovieDetailPresenterProtocol
+    func saveMovie()
+    func deleteAllMovies()
     
 }

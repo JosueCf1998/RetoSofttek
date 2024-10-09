@@ -13,8 +13,11 @@ class MoviesPresenter: MoviesPresenterProtocol {
     private let interactor: MoviesInteractor
     private let router: MoviesRouter
     
-    @Published var movies: [Movie] = []
+    @Published var listMovies: [MovieDetailModel] = []
+//    @Published var listMovies: [ListMovieModel] = []
+    @Published var selectedMovie: MovieDetailModel? = nil
     @Published var isNavigating: Bool = false
+    @Published var inputSearch: String = ""
     
     // MARK: - CONSTRUCTOR
     init(
@@ -26,16 +29,77 @@ class MoviesPresenter: MoviesPresenterProtocol {
     }
     
     // MARK: - FUNCTIONS
-    func fetchMovies() {
-//        interactor.fetchMovies { [weak self] movies in
-//            DispatchQueue.main.async {
-//                self?.movies = movies
-//            }
-//        }
+    
+}
+
+// MARK: - EXTENSION
+extension MoviesPresenter {
+    
+    func getListMovies() {
+        interactor.getListMovies { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let list, let detail):
+                    print(detail.count)
+                    self.listMovies = detail
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
     
-    func navigateToMovieDetail(for movie: Movie) -> any MovieDetailPresenterProtocol {
-        return router.getValuesMoviesDetail(for: movie)
+    func fetchMovies() {
+        interactor.getAllListMovies { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+//                    self?.listMovies = response
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func saveMovie() {
+        let request = MovieModel(
+            title: "",
+            image: "",
+            note: "",
+            date: "",
+            resume: ""
+        )
+        interactor.saveMovie(request) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    print("se guardo")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func deleteAllMovies() {
+        interactor.deleteAllMovies { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    print("se elimino todos")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func validateMovieDetail(_ item: MovieDetailModel) {
+        selectedMovie = item
+        isNavigating = true
     }
     
 }

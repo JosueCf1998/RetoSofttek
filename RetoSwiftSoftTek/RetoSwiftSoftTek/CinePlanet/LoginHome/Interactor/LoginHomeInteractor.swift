@@ -11,13 +11,13 @@ import CoreData
 class LoginHomeInteractor: LoginHomeInteractorProtocol {
     
     // MARK: - PROPERTIES
-    let coreDataManager: CoreDataProvider
+//    let coreDataManager: CoreDataManager
     
     // MARK: - CONSTRUCTOR
     init(
-        coreDataManager: CoreDataProvider = .shared
+//        coreDataManager: CoreDataManager = .shared
     ) {
-        self.coreDataManager = coreDataManager
+//        self.coreDataManager = coreDataManager
     }
     
     // MARK: - FUNCTIONS

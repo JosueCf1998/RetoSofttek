@@ -9,5 +9,11 @@ import Foundation
 
 class MovieDetailRouter {
     
+    // MARK: - CONSTRUCTOR
+    init() {}
+    
+    // MARK: - CONSTRUCTOR
+    // TODO: REALIZAR NAVEGACION
+    
 }
 

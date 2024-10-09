@@ -26,9 +26,6 @@ class LoginAccessPresenter: LoginAccessPresenterProtocol {
     }
     
     // MARK: - FUNCTIONS
-    func navigateToLoginHome() -> any LoginHomePresenterProtocol {
-        return router.getValuesLoginHome()
-    }
     
 }
 

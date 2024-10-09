@@ -10,7 +10,9 @@ import Foundation
 protocol MoviesInteractorProtocol {
     
     // MARK: - FUNCTIONS
-    func fetchMovies(completion: @escaping ([Movie]) -> Void)
+    func getAllListMovies(completion: @escaping(Result<[ListMovieModel], ErrorService>) -> Void)
+    func saveMovie(_ request: MovieModel, completion: @escaping(Result<Void, ErrorService>) -> Void)
+    func deleteAllMovies(completion: @escaping (Result<Void, ErrorService>) -> Void)
     
 }
 

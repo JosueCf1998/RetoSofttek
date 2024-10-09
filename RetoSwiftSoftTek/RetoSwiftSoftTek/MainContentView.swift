@@ -10,15 +10,21 @@ import CoreData
 
 @main
 struct MainContentView: App {
+    
+    // MARK: - PROPERTIES
+//    let persistenceController = CoreDataManager.shared
+    @State var returnLogin: Bool = false
+    
+    // MARK: - CONTENT BODY
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                let interactor = LoginAccessInteractor()
-                let router = LoginAccessRouter()
-                let presenter = LoginAccessPresenter(interactor: interactor, router: router)
-                LoginAccessView(presenter: presenter)
-                    .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
+            NavigationStack() {
+//                InitialLoginAccessView()
+                InitialMoviesView(returnLogin: $returnLogin)
+    //                .environment(\.managedObjectContext, persistenceController.persistentContainer.viewContext)
             }
+            .navigationBarHidden(true)
         }
     }
+    
 }

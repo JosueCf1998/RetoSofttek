@@ -31,6 +31,8 @@ class LoginHomePresenter: LoginHomePresenterProtocol {
     
     // MARK: - METHODS
     func validateCredentials() {
+        isNavigating = true
+        return 
         let valUser = validateCredentialsUserName()
         let valPass = validateCredentialsPassword()
         if valUser == true && valPass == true {
@@ -66,11 +68,6 @@ class LoginHomePresenter: LoginHomePresenterProtocol {
         } else {
             return true
         }
-    }
-    
-
-    func navigateToMovies() -> any MoviesPresenterProtocol {
-        return router.getValuesMovie()
     }
     
 }

@@ -13,11 +13,6 @@ class LoginHomeRouter: LoginHomeRouterProtocol {
     init() {}
     
     // MARK: - FUNCTIONS
-    func getValuesMovie() -> any MoviesPresenterProtocol {
-        let interactor = MoviesInteractor()
-        let router = MoviesRouter()
-        let presenter = MoviesPresenter(interactor: interactor, router: router)
-        return presenter
-    }
+    // TODO: REALIZAR NAVEGACION
     
 }
